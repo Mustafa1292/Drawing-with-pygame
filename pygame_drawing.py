@@ -44,14 +44,20 @@ while running:
             
     if keys[pygame.K_DOWN]:
         y += vel
-    if keys[pygame.K_SPACE] and keys[pygame.K_LSHIFT]:#*********************add up and down
+    if keys[pygame.K_SPACE] and keys[pygame.K_LSHIFT]:
         xx = pygame.draw.rect(win, (0, 0, 0), (x, y, width, height))
         x+=vel
     if keys[pygame.K_SPACE] and keys[pygame.K_LCTRL]:
         xx = pygame.draw.rect(win, (0, 0, 0), (x, y, width, height))
         x-=vel
 
-   
+    if keys[pygame.K_SPACE] and keys[pygame.K_z]: 
+        xx = pygame.draw.rect(win, (0, 0, 0), (x, y, width, height))
+        y -= vel
+
+    if keys[pygame.K_SPACE] and keys[pygame.K_x]: 
+        xx = pygame.draw.rect(win, (0, 0, 0), (x, y, width, height))
+        y += vel
         
     xx = pygame.draw.rect(win, (255, 0, 0), (x, y, width, height))#5 drawing shapes 1st the surface , 2nd the color (RGB), X Y coordinates, height and width
     pygame.display.update();
